@@ -1,0 +1,728 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #f4a6c1;
+  --dark: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--primary);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 30px;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--secondary);
+}
+
+/* Hamburger (mobil) */
+#hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  color: #ff69b4;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("images/background.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1200px;
+  border-radius: 60px 60px 60px 60px / 40px 40px 40px 40px; /* hafif bombeli */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1 1 60%;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 166, 193, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  padding: 50px 40px;
+  color: #333;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #e18aaa;
+}
+.hero-text p {
+  font-size: 20px;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.services-list {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.services-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.work {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.works-extra-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
+  border-radius: 50px 50px 50px 50px / 30px 30px 30px 30px; /* bombeli çerçeve */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.works-extra-text {
+  flex: 1 1 50%;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 166, 193, 0.4),
+    rgba(255, 255, 255, 0.5)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fortune-text {
+  color: #d4a017; /* koyu sarı */
+  font-weight: bold;
+}
+
+.works-extra-text h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.works-extra-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.works-extra-image {
+  flex: 1 1 50%;
+  position: relative; /* overlay için gerekli */
+  overflow: hidden;
+}
+#brands {
+  background: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#brands h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.brands-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.brands-track {
+  display: flex;
+  gap: 50px;
+  animation: scroll 30s linear infinite;
+}
+
+.brands-track img {
+  height: 75px; /* logoların yüksekliği */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%); /* siyah beyaz başlasın */
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.brands-track img:hover {
+  filter: grayscale(0%); /* hover ile renk gelsin */
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.brands-slider i {
+  font-size: 40px;
+  color: var(--secondary);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.brands-slider i:hover {
+  transform: scale(1.2);
+  color: #e18aaa;
+}
+
+/* Animasyon */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  } /* ekranın sağından başlar */
+  100% {
+    transform: translateX(-100%);
+  } /* ekranın solundan çıkar */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brands-track {
+    gap: 30px;
+  }
+  .brands-slider i {
+    font-size: 30px;
+  }
+}
+
+/* Founder Card (Aybüke) */
+.founder-card {
+  display: flex;
+  flex-direction: column; /* dikey hizalama */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 50px auto; /* ortala ve alt boşluk bırak */
+  max-width: 400px; /* küçült */
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.founder-card:hover {
+  transform: translateY(-8px); /* hoverda hafif yukarı çıksın */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.founder-card img {
+  width: 180px; /* fotoğrafı küçült */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+  margin-bottom: 15px;
+  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+}
+
+.founder-card img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.founder-card h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.founder-card h3 {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.founder-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+/* Alt çizgiyi tamamen kapat */
+.founder-card .socials a,
+.member .socials a {
+  text-decoration: none;
+  color: inherit; /* normalde bulunduğu metin rengini alır */
+  font-size: 1.4rem; /* ikon boyutunu istersen buradan büyütebilirsin */
+  margin: 0 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover efekti */
+.founder-card .socials a:hover,
+.member .socials a:hover {
+  color: var(--secondary); /* ikon hover rengi */
+  transform: scale(1.2); /* ikon hover’da biraz büyüsün */
+}
+
+/* Team (Buse & Enes) */
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.member {
+  text-align: center;
+  max-width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.member img:hover {
+  transform: scale(1.1);
+  border-color: var(--secondary);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.member h3 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.member p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.works-extra-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Gradient overlay */
+.works-extra-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(244, 166, 193, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none; /* overlay tıklamayı engellemez */
+}
+
+/* Optional hover zoom efekti */
+.works-extra-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .works-extra-container {
+    flex-direction: column;
+  }
+  .works-extra-text,
+  .works-extra-image {
+    flex: 1 1 100%;
+  }
+  .works-extra-text {
+    padding: 30px 20px;
+  }
+}
+
+/* Galeri */
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-track {
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.gallery-track img,
+.gallery-track video {
+  object-fit: cover;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-track img:hover,
+.gallery-track video:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-btn {
+  background: var(--secondary);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.gallery-btn:hover {
+  background: #e18aaa;
+}
+
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.lightbox-content {
+  margin: 50px auto;
+  max-width: 90%;
+  max-height: 80vh;
+  display: none;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lightbox .close:hover {
+  color: var(--secondary);
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#modalPrev {
+  left: 10px;
+}
+#modalNext {
+  right: 10px;
+}
+
+.apply-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.apply-wrapper img {
+  width: 150px;
+}
+
+.apply-btn {
+  padding: 12px 25px;
+  background: var(--secondary);
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #e18aaa;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: var(--secondary);
+  font-size: 20px;
+}
+
+.footer-socials {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+  color: var(--secondary);
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #e18aaa;
+}
+
+footer {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+#backToTop:hover {
+  background: #e18aaa;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: none; /* başlangıçta gizli */
+  }
+
+  nav ul.active {
+    display: flex; /* aktif olduğunda görünür */
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-image,
+  .about-text {
+    flex: 1 1 100%;
+  }
+  .about-text {
+    padding: 30px 20px;
+  }
+}
